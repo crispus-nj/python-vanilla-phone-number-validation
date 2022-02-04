@@ -72,7 +72,23 @@ def split(word):
                 print("Follow simple instructions")
     else :
         print("Invalid number")
-
+        print("You have not enter any number!")
+        print("Please enter your number")
+        number = input()
+        if (len(number) == 10) or (len(number)== 13):
+            for char in number: 
+                if char[0] != ref_number:
+                    words = list(word)
+                    menono = ''.join(number)
+                    if (menono[0:2] == '07')or (string[0:2]== '71') or (string[0:2]== '01'):
+                        maneno_mingi = list(menono)
+                        maneno_mingi.pop(0)
+                        wod = ''.join(maneno_mingi)
+                        num_validate = int(ref_number + wod)
+                        return num_validate
+                    elif (menono[0:3]== '254') or (menono[0:4]== '+254'):
+                        num_maneno = int(menono)
+                        return num_maneno
 
 try:
     print("Please enter your number")
